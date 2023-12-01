@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const getLocalStorage = () => {
-      const patients = JSON.parse(localStorage.getItem("patients") || "") ?? [];
+      const patients = JSON.parse(localStorage.getItem("patients")!) ?? [];
       setPatients(patients);
     };
     getLocalStorage();
